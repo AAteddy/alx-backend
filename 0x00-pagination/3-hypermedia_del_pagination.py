@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Deletion-resilient hypermedia pagination.
+"""Deletion-resilient hypermedia pagination.
 
 The goal here is that if between two queries, certain rows are
 removed from the dataset, the user does not miss items from
