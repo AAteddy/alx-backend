@@ -38,8 +38,8 @@ class LIFOCache(BaseCaching):
         """doc"""
         if key and item:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-                last_key = list(self.cache_data.keys())[-1]
-                self.cache_data.pop(last_key)
+                last_key = self.cache_data.popitem()
+                # self.cache_data.pop(last_key)
                 print("DISCARD: {}".format(last_key))
             self.cache_data[key] = item
 
