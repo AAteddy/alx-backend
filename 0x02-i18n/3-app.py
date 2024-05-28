@@ -27,7 +27,7 @@ babel = Babel(app)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale() -> str:
     """Determines & Returns the best match
     with the supported languages.
     """
@@ -35,7 +35,7 @@ def get_locale():
 
 
 @app.route("/")
-def index():
+def index() -> str:
     """Returns a rendered index.html template"""
     return render_template("3-index.html")
 
